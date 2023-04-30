@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 const Sidebar = (setClick) => {
     return (
-        <aside className="bg-primary  flex flex-col items-center w-14 top-[9.5%]
+        <aside className="bg-primary  flex flex-col items-center w-14 top-[11%]
         right-[0%] py-8 overflow-hidden  border-l border-gray-700 fixed ">
             <nav className="flex flex-col items-center flex-1 space-y-6">
 
@@ -13,13 +13,15 @@ const Sidebar = (setClick) => {
                     onClick={() => setClick(false)}
                     className="p-1.5 text-gray-700 focus:outline-none transition-colors duration-200 rounded-lg hover:bg-gray-200"
                 >
+
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
                         viewBox="0 0 24 24"
                         strokeWidth={1.5}
                         stroke="currentColor"
-                        className="w-6 h-6"
+                        className="w-6 h-6 "
+
                     >
                         <path
                             strokeLinecap="round"
@@ -28,11 +30,15 @@ const Sidebar = (setClick) => {
                         />
                     </svg>
                 </Link >
+
+
                 <Link to={"/api/pricing"}
                     onClick={() => setClick(false)}
 
                     className="p-1.5 text-gray-700 focus:outline-none transition-colors duration-200 rounded-lg  hover:bg-gray-200"
                 >
+
+
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
@@ -49,12 +55,11 @@ const Sidebar = (setClick) => {
                     </svg>
                 </Link >
 
-
                 <Link to={"api/contact"}
                     onClick={() => setClick(false)}
-
                     className="p-1.5 text-gray-700 focus:outline-none transition-colors duration-200 rounded-lg  hover:bg-gray-200"
                 >
+
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
@@ -69,7 +74,9 @@ const Sidebar = (setClick) => {
                             d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0111.186 0z"
                         />
                     </svg>
+
                 </Link >
+
             </nav>
 
             <div className="flex flex-col mt-4 items-center ">
