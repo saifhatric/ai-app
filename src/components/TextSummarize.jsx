@@ -1,4 +1,5 @@
-import { useState } from "react"
+import { useState, useRef, useEffect } from "react"
+
 import { usePostTextMutation } from "../Features/api/ArticleApi"
 import {
     copy,
@@ -11,6 +12,7 @@ const TextSummarize = () => {
     const [text, settext] = useState("")
     const [SumText, setSumText] = useState("")
     const [copied, setcopied] = useState(false)
+    const inputRef = useRef(null)
     const [postText, { isLoading, isError, error }] = usePostTextMutation()
     const handleText = async (e) => {
         e.preventDefault()
@@ -22,31 +24,36 @@ const TextSummarize = () => {
         navigator.clipboard.writeText(summary)
         setTimeout(() => setcopied(false), 3000)
     }
+    useEffect(() => {
+        inputRef.current?.focus()
+    }, [])
 
     return (
-        <section>
-            <div className="gradient" />
+        <section className="w-full h-full">
+
             <div className="w-full flex items-center justify-center flex-col ">
 
-                <div className="text-center font-poppins">
-                    <h1 className="head-text text-5xl tracking-wider ">Summarize  with<br className="md:hidden" />
+                <div className="text-center font-poppins mt-[8rem]">
+                    <h1 className="head-text text-5xl tracking-wider text-gray-500">Summarize  with<br className="md:hidden" />
                         <span className="orange_gradient text-6xl ">openAI</span>
                     </h1>
                     <h2 className="desc">
-                        <span className="text-blue-800 text-2xl"> Summiz</span> an open-source article summraizer, That can make your reading sufficient
+                        <span className="text-secondary  text-2xl"> Summiz</span> an open-source article summraizer, That can make your reading sufficient
                     </h2>
                 </div>
             </div>
-            <form onSubmit={(e) => handleText(e)} className="relative flex justify-center items-center">
+            <form onSubmit={(e) => handleText(e)} className=" flex 
+             justify-center items-center mt-6 mx-4">
                 <input type="text"
-                    value={text}
-                    className="url_input peer"
+                    className="url_input  outline-none "
                     placeholder="Enter a Text"
+                    value={text}
+                    ref={inputRef}
+
                     onChange={(e) => settext(e.target.value)} />
                 <button type="submit"
                     className="submit_btn 
-                        peer-focus:border-gray-700
-                        peer-focus:text-gray-700">
+                        ">
                     ↩
                 </button>
             </form>
@@ -70,11 +77,11 @@ const TextSummarize = () => {
                 ) : (
                     SumText.summary && (
                         <div className="flex flex-col gap-3">
-                            <h2 className="font-poppins font-bold text-xl text-gary-600">
+                            <h2 className="font-poppins font-bold text-xl text-white/40">
                                 Text <span className="blue_gradient">Summary</span>
                             </h2>
                             <div className="summary_box">
-                                <p className="font-poppins font-medium text-sm text-gray-700">{SumText.summary}</p>
+                                <p className="font-poppins font-medium text-sm text-dimWhite">{SumText.summary}</p>
                                 <div className="copy_btn">
                                     <img src={copied ? tick : copy} alt="copy_icon"
                                         onClick={() => handleCopy(SumText.summary)}
@@ -85,6 +92,7 @@ const TextSummarize = () => {
                     )
                 )}
             </div>
+
         </section>
     )
 }

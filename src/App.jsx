@@ -14,7 +14,7 @@ const App = () => {
 
   return (
 
-    <main >
+    <main className="w-full bg-black">
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />

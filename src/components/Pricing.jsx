@@ -4,7 +4,7 @@
 const Pricing = () => {
 
     return (
-        <div className="bg-white font-poppins">
+        <div className="mt-16 bg-white font-poppins">
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 
                 <div className=" flex-col items-center justify-center space-y-6 py-10  lg:py-24 text-start ">

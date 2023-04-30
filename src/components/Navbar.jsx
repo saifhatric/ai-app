@@ -1,18 +1,21 @@
 import { useState } from 'react'
 import { navLinks } from './utils';
 import { Link } from 'react-router-dom'
-import { logo, close, menu, } from '../assets';
+import { images2, close, menu, } from '../assets';
+import Sidebar from './SideBar';
 const Navbar = () => {
     const [click, setClick] = useState(false)
     return (
-        <div className="">
-            <nav className=" w-full  bg-gray-900  px-8 py-5  md:py-4 flex justify-between items-center border-y border-gray-500 ">
+        <div >
+            <nav className=" w-full fixed top-0 bg-black  px-8 py-5  md:py-4 flex justify-between items-center border-y border-gray-500  ">
                 <div
                     className="text-3xl font-bold leading-none flex items-center space-x-4"
 
                 >
                     <Link to={"/"} >
-                        <img src={logo} alt="sumz-logo" className="md:w-28 object-contain text-blue-600" />
+                        <div >
+                            <img src={images2} className="w-16 rounded-2xl object-contain " alt="summrizer" />
+                        </div>
                     </Link>
 
                 </div>
@@ -22,24 +25,25 @@ const Navbar = () => {
                         className="navbar-burger flex items-center fixed 
                         right-[1%] top-[1%]
                         text-gray-300 py-5 mr-2 sm:hidden">
-                        <img src={click ? close : menu}></img>
+                        <img src={click ? close : menu} className="w-[1.75rem] mr-2 "></img>
 
                     </button>
                 </div>
                 {click ? (
-                    <div className=''>
-                        <ul className=" flex flex-row items-center grow mx-10 space-x-6">
-                            {navLinks.map((link, index) => (
+                    // <div className=''>
+                    //     <ul className=" flex flex-row items-center grow mx-10 space-x-6">
+                    //         {navLinks.map((link, index) => (
 
-                                <li key={index} className='className="text-sm text-gray-400 
-                        hover:text-gray-600 "' >
-                                    <Link to={link.adrress}>
-                                        {link.name}
-                                    </Link>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
+                    //             <li key={index} className='className="text-sm text-gray-400
+                    //     hover:text-gray-600 "' >
+                    //                 <Link to={link.adrress} onClick={() => setClick(false)}>
+                    //                     {link.name}
+                    //                 </Link>
+                    //             </li>
+                    //         ))}
+                    //     </ul>
+                    // </div>
+                    <Sidebar setClick={setClick} />
                 )
                     : ""}
                 <ul className="hidden sm:flex sm:items-center grow mx-10 space-x-6">

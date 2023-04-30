@@ -1,7 +1,4 @@
-import { Dialog } from '@headlessui/react'
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
-import { ChevronDownIcon } from '@heroicons/react/24/solid'
-import React, { useState } from 'react'
+
 
 
 const ContactPage = () => {

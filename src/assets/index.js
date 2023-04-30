@@ -5,7 +5,7 @@ import logo from './logo.svg'
 import tick from './tick.svg'
 import close from "./close.svg"
 import menu from "./menu.svg"
-
+import images2 from "./images2.png"
 
 export {
     linkIcon,
@@ -14,5 +14,6 @@ export {
     logo,
     tick,
     close,
-    menu
+    menu,
+    images2
 }
