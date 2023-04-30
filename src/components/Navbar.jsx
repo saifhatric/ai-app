@@ -30,20 +30,10 @@ const Navbar = () => {
                     </button>
                 </div>
                 {click ? (
-                    // <div className=''>
-                    //     <ul className=" flex flex-row items-center grow mx-10 space-x-6">
-                    //         {navLinks.map((link, index) => (
+                    <div className='md:hidden'>
 
-                    //             <li key={index} className='className="text-sm text-gray-400
-                    //     hover:text-gray-600 "' >
-                    //                 <Link to={link.adrress} onClick={() => setClick(false)}>
-                    //                     {link.name}
-                    //                 </Link>
-                    //             </li>
-                    //         ))}
-                    //     </ul>
-                    // </div>
-                    <Sidebar setClick={setClick} />
+                        <Sidebar setClick={setClick} />
+                    </div>
                 )
                     : ""}
                 <ul className="hidden sm:flex sm:items-center grow mx-10 space-x-6">
