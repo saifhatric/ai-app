@@ -1,5 +1,5 @@
 
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom'
 import { AiFillHome } from "react-icons/ai"
 import { BsFillTelephoneForwardFill } from "react-icons/bs"
 import { MdAttachMoney } from "react-icons/md"
@@ -15,40 +15,37 @@ const Sidebar = (setClick) => {
 
                 <Link to="/"
                     onClick={() => setClick(false)}
-                    className="p-1.5 text-gray-700 focus:outline-none transition-colors duration-200 rounded-lg hover:bg-gray-200"
+
                 >
 
-                    <AiFillHome className="w-6 h-6" />
+                    <AiFillHome className="w-6 h-6 p-1.5 text-gray-700 focus:outline-none transition-colors duration-200 rounded-lg  hover:bg-gray-200" />
                 </Link >
 
 
-                <Link to={"api/pricing"}
-                    onClick={() => setClick(false)}
+                <Link to="api/pricing"
+                // onClick={() => setClick(false)}
 
-                    className="p-1.5 text-gray-700 focus:outline-none transition-colors duration-200 rounded-lg  hover:bg-gray-200"
+
                 >
 
 
-                    <MdAttachMoney className="w-6 h-6" />
+                    <MdAttachMoney className="w-6 h-6 p-1.5 text-gray-700 focus:outline-none transition-colors duration-200 rounded-lg  hover:bg-gray-200" />
                 </Link >
 
-                <Link to="api/contact"
-                    onClick={() => setClick(false)}
-                    className="p-1.5 text-gray-700 focus:outline-none transition-colors duration-200 rounded-lg  hover:bg-gray-200"
-                >
-                    <BsFillTelephoneForwardFill className="w-6 h-6" />
+                <Link to="api/contact" onClick={() => setClick(false)}>
+                    <BsFillTelephoneForwardFill className="w-6 h-6 p-1.5 text-gray-700 focus:outline-none transition-colors duration-200 rounded-lg  hover:bg-gray-200" />
                 </Link >
 
             </nav>
 
             <div className="flex flex-col mt-4 items-center ">
                 <Link to="api/summarize-text"
-                    onClick={() => setClick(false)}
+                // onClick={() => setClick(false)}
 
-                    className="p-1.5 text-gray-700 focus:outline-none transition-colors duration-200 rounded-lg dark:text-gray-200 dark:bg-gray-800 bg-gray-100"
+
                 >
 
-                    <img src={images} className="h-6 w-6 rounded-full object-contain" alt="ai-photo" />
+                    <img src={images} className="h-6 w-6 rounded-full object-contain p-1.5 text-gray-700 focus:outline-none transition-colors duration-200   hover:bg-gray-200" alt="ai-photo" />
                 </Link>
 
                 <div>
