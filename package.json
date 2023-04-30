@@ -2,11 +2,11 @@
   "name": "chat-gpt-app",
   "private": true,
   "version": "0.0.0",
-  "homepage":"https://saifhatric.github.io/startup",
+  "homepage": "https://saifhatric.github.io/startup",
   "type": "module",
   "scripts": {
-    "predeploy":"npm run build",
-    "deploy":"gh-pages -d build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
@@ -14,6 +14,7 @@
   },
   "dependencies": {
     "@headlessui/react": "^1.7.14",
+    "@heroicons/react": "^2.0.17",
     "@reduxjs/toolkit": "^1.9.5",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",

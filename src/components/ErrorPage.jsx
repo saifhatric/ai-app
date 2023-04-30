@@ -1,3 +1,4 @@
+import { ArrowLeftIcon } from "@heroicons/react/24/outline";
 import { Link } from 'react-router-dom';
 const ErrorPage = () => {
     return (
@@ -16,7 +17,7 @@ const ErrorPage = () => {
 
                         <div className="flex items-center mt-6 gap-x-3 ">
                             <button className="inline-flex items-center rounded-md border border-indigo-600 px-3.5 py-1.5 text-base font-semibold leading-7 text-black dark:text-white">
-                                <span className="w-4 h-4 mr-2 text-dimWhite" >←</span>
+                                <ArrowLeftIcon className="w-4 h-4 mr-2 text-dimWhite" />
                                 <span className='text-gray-500'> Take me Back</span>
                             </button>
 
