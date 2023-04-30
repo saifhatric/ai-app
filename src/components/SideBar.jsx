@@ -13,7 +13,7 @@ const Sidebar = (setClick) => {
             <nav className="flex flex-col items-center flex-1 space-y-6">
 
 
-                <Link to={"/"}
+                <Link to="/"
                     onClick={() => setClick(false)}
                     className="p-1.5 text-gray-700 focus:outline-none transition-colors duration-200 rounded-lg hover:bg-gray-200"
                 >
@@ -32,7 +32,7 @@ const Sidebar = (setClick) => {
                     <MdAttachMoney className="w-6 h-6" />
                 </Link >
 
-                <Link to={"api/contact"}
+                <Link to="api/contact"
                     onClick={() => setClick(false)}
                     className="p-1.5 text-gray-700 focus:outline-none transition-colors duration-200 rounded-lg  hover:bg-gray-200"
                 >
@@ -42,7 +42,7 @@ const Sidebar = (setClick) => {
             </nav>
 
             <div className="flex flex-col mt-4 items-center ">
-                <Link to={"api/summarize-text"}
+                <Link to="api/summarize-text"
                     onClick={() => setClick(false)}
 
                     className="p-1.5 text-gray-700 focus:outline-none transition-colors duration-200 rounded-lg dark:text-gray-200 dark:bg-gray-800 bg-gray-100"
