@@ -2,7 +2,7 @@
   "name": "chat-gpt-app",
   "private": true,
   "version": "0.0.0",
-  "homepage":"https://saifhatric.github.io/startUp",
+  "homepage":"https://saifhatric.github.io/startup",
   "type": "module",
   "scripts": {
     "predeploy":"npm run build",
