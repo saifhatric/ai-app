@@ -32,7 +32,7 @@ const Navbar = () => {
                 {click ? (
                     <div className='md:hidden'>
 
-                        <Sidebar setClick={setClick} />
+                        <Sidebar />
                     </div>
                 )
                     : ""}
