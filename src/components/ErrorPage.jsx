@@ -1,5 +1,3 @@
-import React from 'react'
-import { ArrowLeftIcon } from "@heroicons/react/24/outline";
 import { Link } from 'react-router-dom';
 const ErrorPage = () => {
     return (
@@ -18,7 +16,7 @@ const ErrorPage = () => {
 
                         <div className="flex items-center mt-6 gap-x-3 ">
                             <button className="inline-flex items-center rounded-md border border-indigo-600 px-3.5 py-1.5 text-base font-semibold leading-7 text-black dark:text-white">
-                                <ArrowLeftIcon className="w-4 h-4 mr-2 text-dimWhite" />
+                                <span className="w-4 h-4 mr-2 text-dimWhite" >←</span>
                                 <span className='text-gray-500'> Take me Back</span>
                             </button>
 
@@ -39,7 +37,7 @@ const ErrorPage = () => {
                                     xmlns="http://www.w3.org/2000/svg"
                                     fill="none"
                                     viewBox="0 0 24 24"
-                                    stroke-width="1.5"
+                                    strokeWidth="1.5"
                                     stroke="currentColor"
                                     className="w-5 h-5 rtl:rotate-180"
                                 >
@@ -95,7 +93,7 @@ const ErrorPage = () => {
                                     xmlns="http://www.w3.org/2000/svg"
                                     fill="none"
                                     viewBox="0 0 24 24"
-                                    stroke-width="1.5"
+                                    strokeWidth="1.5"
                                     stroke="currentColor"
                                     className="w-5 h-5 rtl:rotate-180"
                                 >
