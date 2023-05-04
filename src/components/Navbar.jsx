@@ -12,7 +12,7 @@ const Navbar = () => {
                     className="text-3xl font-bold leading-none flex items-center space-x-4"
 
                 >
-                    <Link to={"/"} >
+                    <Link to={"/ai-app"} >
                         <div >
                             <img src={images2} className="w-16 rounded-2xl object-contain " alt="summrizer" />
                         </div>

@@ -16,9 +16,9 @@ const App = () => {
 
     <main className="w-full bg-black">
       <Routes>
-        <Route path="/" element={<Layout />}>
+        <Route path="/ai-app" element={<Layout />}>
           <Route index element={<Home />} />
-          <Route path="/api">
+          <Route path="api">
             <Route path="pricing" element={<Pricing />} />
             <Route path="contact" element={<ContactPage />} />
             <Route path="summarize-text" element={<TextSummarize />} />
